@@ -176,12 +176,12 @@ document.addEventListener('DOMContentLoaded', uzRenderSidebar);
 //   callGAS / callGASPost 内で { action:'user_call', clientId:CLIENT_ID, userAction, data } の
 //   形に自動変換して master GAS に投げる＝ 呼出側（sales.js/cost.js/attendance 等）は無変更で
 //   v0.10.0 経路になる。詳細は 資料/知識MD/04_運営ポータル.md §11。
-const GAS_URL = 'https://script.google.com/macros/s/AKfycbwBDHj9-p6ZT6ExXrxF1Q-XwiEkNMPwDc0aAuk7zptivRhWhepvaCDsjaIJd7WHh_h9-A/exec';
-const CLIENT_ID = '__CLIENT_ID__';
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbyZTQH6E_JIgHqigCbbfQHScJoxBFVKdJOX80WM6SNRlmLCmOjLxsKKkRRff0_gLrQ/exec';
+const CLIENT_ID = 'uz-toshiaki-qg27';
 // v0.11.0（2026-09-06）：店舗固有 apiToken。master GAS が発行時に clients シートに保存し
 //   本定数へ埋め込む。全 user_call リクエストで送信し master 側で clientId × apiToken を
 //   照合＝ URL 予測（-<4桁ランダム>）と組合わせて 3 層防御の 1 層を担う。
-const API_TOKEN = '__API_TOKEN__';
+const API_TOKEN = 'ae411c3ee7bd4509a463c55f7a3d0951';
 
 /* ── デモモード（複製元 ultra-z-leo・UI確認用） ───────────────
    複製元はテンプレGASの SPREADSHEET_ID が __SPREADSHEET_ID__ のままで、
